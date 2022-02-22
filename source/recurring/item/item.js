@@ -6,21 +6,31 @@ class wholeItem
         this.item = document.getElementById("item");
         this.item_top_img = document.getElementById("item_top_img");
         this.item_bottom = document.getElementById("item_bottom");
+        
+        this.item_top_img.addEventListener("click", this.link_to_item_page);
+        this.item_bottom.addEventListener("click", this.link_to_item_page);
 
         // item favourite
         this.item_favourites_heart = document.getElementById("favourites");
         this.item_favourites_heart_fill = document.getElementById("cls-1");
         this.item_favourites_toggle = false;
 
+        this.item_favourites_heart.addEventListener("click", this.item_favourites_fill_red);
+
         // item add show / hide
         this.quantity = 1;
         this.item_add = document.getElementById("item_add");
         this.item_add_pressed = document.getElementById("item_add_pressed");
 
+        this.item_add.addEventListener("click", this.show_item_add_pressed);
+
         // item_quantity
         this.plus = document.getElementById("item_add_plus");
         this.minus = document.getElementById("item_add_minus");
         this.item_add_pressed_label = document.getElementById("item_add_pressed_label");
+
+        this.plus.addEventListener("click", this.item_quantity_minus);
+        this.minus.addEventListener("click", this.item_quantity_plus);
     }
 
     link_to_item_page()
@@ -139,7 +149,7 @@ var item_favourites_toggle = false; */
     }
 } */
 
-item_favourites_heart.addEventListener("click", item_favourites_fill_red());
+/* item_favourites_heart.addEventListener("click", item_favourites_fill_red()); */
 
 /* item add show / hide */
 
@@ -172,7 +182,7 @@ function hide_item_add_pressed_visibility()
     item_add_pressed.style.visibility = "hidden";
 } */
 
-item_add.addEventListener("click", show_item_add_pressed);
+/* item_add.addEventListener("click", show_item_add_pressed()); */
 
 /* item_quantity */
 
@@ -205,8 +215,8 @@ function item_quantity_plus()
     item_add_pressed_label.innerHTML = quantity;
 } */
 
-plus.addEventListener("click", item_quantity_minus);
-minus.addEventListener("click", item_quantity_plus);
+/* plus.addEventListener("click", item_quantity_minus());
+minus.addEventListener("click", item_quantity_plus()); */
 
 
 
