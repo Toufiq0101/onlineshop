@@ -33,11 +33,11 @@ class wholeItem
         this.minus.addEventListener("click", this.item_quantity_plus);
     }
 
-    link_to_item_page()
+    link_to_item_page($link)    // <-- propably with php header(function)
     {
         this.item.style.bottom = "0%";
         this.item.style.right = "0%";
-        window.location.href = "https://www.ecosia.org/search?method=index&q=test";
+        window.location.href = $link;
     }
 
     item_favourites_fill_red()
@@ -94,7 +94,6 @@ class wholeItem
 
     item_quantity_plus()
     {
-        
         if (this.quantity == 100)
         {
             this.quantity = quantity;
